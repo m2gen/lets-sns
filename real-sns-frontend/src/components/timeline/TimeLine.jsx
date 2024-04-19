@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import "./TimeLine.css";
+import Share from '../share/Share';
+import Post from '../post/Post';
 
-function TimeLine() {
+export default function Timeline() {
   return (
-    <div>TimeLine</div>
+    <div className='timeline'>
+      <div className="timelineWrapper">
+        <Share />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+      </div>
+    </div>
   )
 }
-
-export default TimeLine
