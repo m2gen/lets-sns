@@ -6,7 +6,7 @@ import { Users } from "../../../src/dummyData";
 import { Link } from 'react-router-dom';
 
 
-function Sidebar() {
+export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -36,7 +36,7 @@ function Sidebar() {
             </li>
             <li className="sidebarListItem">
               <Person className='sidebarIcon' />
-              <Link to="/profile/user" style={{ textDecoration: "none", color: "black" }}>
+              <Link to="/profile/pan" style={{ textDecoration: "none", color: "black" }}>
                 <span className="sidebarListItemText">プロフィール</span>
               </Link>
             </li>
@@ -54,7 +54,5 @@ function Sidebar() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
-export default Sidebar

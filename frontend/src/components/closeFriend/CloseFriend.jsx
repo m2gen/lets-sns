@@ -7,5 +7,5 @@ export default function CloseFriend({ user }) {
       <img src={PUBLIC_FOLDER + user.profilePicture} alt="" className='sidebarFriendImg' />
       <span className="sidebarFriendName">{user.username}</span>
     </li>
-  )
+  );
 }
