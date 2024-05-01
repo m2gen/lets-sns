@@ -1,7 +1,7 @@
-import React, { useContext, useRef } from 'react';
 import "./Login.css";
 import { loginCall } from '../../actionCalls';
 import { AuthContext } from '../../state/AuthContext';
+import { useContext, useRef } from "react";
 
 export default function Login() {
 

@@ -3,7 +3,18 @@ import AuthReducer from "./AuthReducer";
 
 // 最初のユーザー状態を定義
 const initialState = {
-  user: null,
+  // user: null,
+  user: {
+    _id: "6618041935569bc65c3c71ef",
+    username: "pan",
+    email: "shincode@gmail.com",
+    password: "122121212121",
+    profilePicture: "/person/1.jpeg",
+    coverPicture: "",
+    followers: [],
+    followings: [],
+    isAdmin: false,
+  },
   isFetching: false,
   error: false,
 };
@@ -11,7 +22,7 @@ const initialState = {
 // 状態をグローバルに管理する
 export const AuthContext = createContext(initialState);
 
-export const AuthContextProvider = ({ Children }) => {
+export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AuthReducer, initialState);
   return (
     <AuthContext.Provider
@@ -21,7 +32,7 @@ export const AuthContextProvider = ({ Children }) => {
         error: state.error,
         dispatch,
       }}>
-      {Children}
+      {children}
     </AuthContext.Provider>
-  )
+  );
 };
